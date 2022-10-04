@@ -1,0 +1,13 @@
+<form action="updaterecord/{{note.id}}" method ="POST">
+
+    {% csrf_token %}
+    Title: <input name = 'newtitle' value = {{note.title}}><br><br>
+    Description: <input name="newdescription" value = {{note.description}}><br><br>
+    <input type="submit" value="Save">
+
+</form>
+
+<form action="deleterecord/{{note.id}}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+</form>
